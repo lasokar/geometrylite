@@ -212,6 +212,10 @@
         t();
     };
     var gameInstance = UnityLoader.instantiate("gameContainer", "Build/geo.json", {onProgress: UnityProgress});
+    
+    window.onbeforeunload = function() {
+    return true;
+    };
 
     function UnityProgress(gameInstance, progress) {
 
