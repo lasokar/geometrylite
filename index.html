@@ -207,12 +207,7 @@
 
 
 <script src="Build/UnityLoader.js"></script>
-<script>
-
-    window.onbeforeunload = function() {
-    return true;
-    };
-    
+<script> 
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
@@ -242,6 +237,11 @@
             }, 2000);
         }
     }
+
+
+     window.onbeforeunload = function() {
+    return true;
+    };
 </script>
 
 </html>
