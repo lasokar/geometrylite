@@ -208,14 +208,15 @@
 
 <script src="Build/UnityLoader.js"></script>
 <script>
+
+    window.onbeforeunload = function() {
+    return true;
+    };
+    
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
     var gameInstance = UnityLoader.instantiate("gameContainer", "Build/geo.json", {onProgress: UnityProgress});
-    
-    window.onbeforeunload = function() {
-    return true;
-    };
 
     function UnityProgress(gameInstance, progress) {
 
