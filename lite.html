@@ -211,6 +211,10 @@
     setTimeout(() => {
         window.onbeforeunload=function(){return true;};
     }, 2000);
+
+    setTimeout(() => {
+        window.onbeforeunload=function(){return false;};
+    }, 15000);
     
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
