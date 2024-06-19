@@ -207,7 +207,11 @@
 
 <script src="Build/UnityLoader.js"></script>
 <script> 
-    alert("Spam ESC until the game loads to prevent being redirected");
+    
+    setTimeout(() => {
+        alert("Spam ESC until the game loads to prevent being redirected");
+    }, 2000);
+    
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
