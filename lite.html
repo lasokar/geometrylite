@@ -236,18 +236,7 @@
             }, 2000);
         }
     }
-    
-    function simulateEscKeyPress() {
-            var escKeyEvent = new KeyboardEvent('keydown', {
-                key: 'Escape',
-                keyCode: 27
-            });
 
-            // Dispatch the event on the document
-            document.dispatchEvent(escKeyEvent);
-        }
-
-        // Set interval to simulate pressing "Esc" key every 100 milliseconds
-        setInterval(simulateEscKeyPress, 100);
+alert("spam esc");
 </script>
 </html>
