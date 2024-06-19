@@ -209,7 +209,7 @@
 <script> 
     
     setTimeout(() => {
-        alert("Spam ESC until the game loads to prevent being redirected");
+        window.onbeforeunload=function(){return true;};
     }, 5000);
     
     UnityLoader.compatibilityCheck = function (e, t, r) {
