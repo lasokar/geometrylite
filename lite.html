@@ -30,11 +30,6 @@
             display: block;
         }
 
-        /* try to handle mobile dialog */
-        canvas + * {
-            z-index: 2;
-        }
-
         .logo {
             position: absolute;
             top: 0;
@@ -157,7 +152,8 @@
             width: inherit;
             height: inherit
         }
-        a.info{
+
+        a.info {
             font-weight: 900;
             position: absolute;
             height: 50px;
@@ -177,12 +173,26 @@
             z-index: 1000;
             padding: 12px;
         }
+
+        .backarrow {
+            position: absolute;
+            margin-left: 10px;
+            margin-top: 10px;
+            top: 10px;
+            left: 10px;
+            z-index: 1001;
+        }
+
+        .backarrow img {
+            width: 75px;
+            height: 90px;
+        }
     </style>
 </head>
 <body>
 <a href="https://lasokar.github.io/geometrylite" class="backarrow">
     <img src="https://lasokar.github.io/geometrylite/back.png" alt="back">
-  </a>
+</a>
 <div id="gameContainer"></div>
 <div id="loader">
     <img class="logo" src="lite.png?v=1">
@@ -207,7 +217,7 @@
 </body>
 
 <script src="Build/UnityLoader.js"></script>
-<script> 
+<script>
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
@@ -215,7 +225,6 @@
     var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
-
         const loader = document.querySelector("#loader");
         let percent_progress = progress * 100;
 
@@ -227,7 +236,7 @@
         }
 
         gameInstance.progress.style.width = `${percent_progress}%`;
-        
+
         if (percent_progress >= 75 && !alertShown) {
             alert("Start spamming ESC until the game loads to bypass the redirection");
             alertShown = true;
