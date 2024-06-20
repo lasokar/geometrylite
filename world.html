@@ -211,6 +211,7 @@
         t();
     };
     var gameInstance = UnityLoader.instantiate("gameContainer", "Build_world/geometryworld.json", {onProgress: UnityProgress});
+    var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
 
