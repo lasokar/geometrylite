@@ -223,15 +223,14 @@
 
         gameInstance.progress.style.width = `${percent_progress}%`;
         
-        // Trigger onbeforeunload when progress reaches 75%
         if (percent_progress >= 75) {
+            alert("test");
             window.onbeforeunload = function() { return true; };
         }
 
         if (progress === 1 && !gameInstance.removeTimeout) {
             gameInstance.removeTimeout = setTimeout(function () {
                 loader.style.display = "none";
-                // Remove onbeforeunload once loading is complete
                 window.onbeforeunload = null;
             }, 2000);
         }
