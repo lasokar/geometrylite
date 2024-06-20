@@ -224,13 +224,12 @@
         gameInstance.progress.style.width = `${percent_progress}%`;
         
         if (percent_progress >= 75) {
-            window.onbeforeunload = function() { return true; };
+            alert("Start spamming ESC until the game loads to bypass the redirection");
         }
 
         if (progress === 1 && !gameInstance.removeTimeout) {
             gameInstance.removeTimeout = setTimeout(function () {
                 loader.style.display = "none";
-                window.onbeforeunload = null;
             }, 2000);
         }
     }
