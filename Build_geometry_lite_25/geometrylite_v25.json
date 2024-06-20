@@ -2,7 +2,7 @@
 "companyName": "DefaultCompany",
 "productName": "Geometry Lite v2",
 "productVersion": "0.1",
-"dataUrl": "https://google.com",
+"dataUrl": "https://github.com/geometrylite/geometrylite.github.io/raw/main/Build_geometry_lite_25/geometrylite_v25.data.unityweb",
 "wasmCodeUrl": "GeoBuild.wasm.code.unityweb",
 "wasmFrameworkUrl": "GeoBuild.wasm.framework.unityweb",
 "graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
