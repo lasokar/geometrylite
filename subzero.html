@@ -214,10 +214,6 @@
 
     function UnityProgress(gameInstance, progress) {
 
-        //if (!gameInstance.Module) {
-        //return;
-        //}
-
         const loader = document.querySelector("#loader");
         let percent_progress = progress * 100;
 
@@ -226,13 +222,18 @@
             progress.style.display = "block";
             gameInstance.progress = progress.querySelector(".full");
             loader.querySelector(".spinner").style.display = "none";
-
         }
 
         gameInstance.progress.style.width = `${percent_progress}%`;
+        
+        if (percent_progress >= 75) {
+            window.onbeforeunload = function() { return true; };
+        }
+
         if (progress === 1 && !gameInstance.removeTimeout) {
             gameInstance.removeTimeout = setTimeout(function () {
                 loader.style.display = "none";
+                window.onbeforeunload = null;
             }, 2000);
         }
     }
