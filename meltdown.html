@@ -211,6 +211,7 @@
         t();
     };
     var gameInstance = UnityLoader.instantiate("gameContainer", "Build_geo_meltdown/geometrmeltdown.json", {onProgress: UnityProgress});
+    var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
 
