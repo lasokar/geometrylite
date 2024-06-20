@@ -207,11 +207,6 @@
 
 <script src="Build/UnityLoader.js"></script>
 <script> 
-    
-    setTimeout(() => {
-        window.onbeforeunload=function(){return true;};
-    }, 4000);
-    
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
@@ -237,6 +232,7 @@
         gameInstance.progress.style.width = `${percent_progress}%`;
         if (progress === 1 && !gameInstance.removeTimeout) {
             gameInstance.removeTimeout = setTimeout(function () {
+                window.onbeforeunload=function(){return true;};
                 loader.style.display = "none";
             }, 2000);
         }
