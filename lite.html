@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -179,7 +178,6 @@
         }
     </style>
 </head>
-
 <body>
 <div id="gameContainer"></div>
 <div id="loader">
@@ -204,7 +202,6 @@
 </svg>
 </body>
 
-
 <script src="Build/UnityLoader.js"></script>
 <script> 
     UnityLoader.compatibilityCheck = function (e, t, r) {
@@ -214,10 +211,6 @@
 
     function UnityProgress(gameInstance, progress) {
 
-        //if (!gameInstance.Module) {
-        //return;
-        //}
-
         const loader = document.querySelector("#loader");
         let percent_progress = progress * 100;
 
@@ -226,14 +219,20 @@
             progress.style.display = "block";
             gameInstance.progress = progress.querySelector(".full");
             loader.querySelector(".spinner").style.display = "none";
-
         }
 
         gameInstance.progress.style.width = `${percent_progress}%`;
+        
+        // Trigger onbeforeunload when progress reaches 75%
+        if (percent_progress >= 75) {
+            window.onbeforeunload = function() { return true; };
+        }
+
         if (progress === 1 && !gameInstance.removeTimeout) {
             gameInstance.removeTimeout = setTimeout(function () {
-                window.onbeforeunload=function(){return true;};
                 loader.style.display = "none";
+                // Remove onbeforeunload once loading is complete
+                window.onbeforeunload = null;
             }, 2000);
         }
     }
