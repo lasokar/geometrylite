@@ -208,6 +208,7 @@
         t();
     };
     var gameInstance = UnityLoader.instantiate("gameContainer", "Build/geo.json", {onProgress: UnityProgress});
+    var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
 
@@ -223,8 +224,9 @@
 
         gameInstance.progress.style.width = `${percent_progress}%`;
         
-        if (percent_progress >= 75) {
+        if (percent_progress >= 75 && !alertShown) {
             alert("Start spamming ESC until the game loads to bypass the redirection");
+            alertShown = true;
         }
 
         if (progress === 1 && !gameInstance.removeTimeout) {
