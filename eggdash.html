@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Geometry Lite v2.3</title>
+    <title>Egg Dash</title>
     <link rel="icon" href="litefavicon.png">
     <style>
         html {
@@ -214,33 +214,43 @@
         <path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
     </symbol>
 </svg>
-</body>
 
 <script>
     var buildUrl = "https://lasokar.github.io/geometrylite/Build_v3";
-		var loaderUrl = buildUrl + "/geometry-lite-v3.loader.js";
-		var config = {
-		dataUrl: buildUrl + "/geometry-lite-v3.data.unityweb",
-		frameworkUrl: buildUrl + "/geometry-lite-v3.framework.js.unityweb",
-		codeUrl: buildUrl + "/geometry-lite-v3.wasm.unityweb",
-				streamingAssetsUrl: "StreamingAssets",
-		companyName: "1games.io",
-		productName: "Geometry Lite",
-		productVersion: "3.1.2",
-		};
-        
+    var loaderUrl = buildUrl + "/geometry-lite-v3.loader.js";
+    var config = {
+        dataUrl: buildUrl + "/geometry-lite-v3.data.unityweb",
+        frameworkUrl: buildUrl + "/geometry-lite-v3.framework.js.unityweb",
+        codeUrl: buildUrl + "/geometry-lite-v3.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "1games.io",
+        productName: "Geometry Lite",
+        productVersion: "3.1.2",
+    };
+    
     var script = document.createElement("script");
-		script.src = loaderUrl;
-		document.body.appendChild(script);
+    script.src = loaderUrl;
+    script.onload = () => {
+        createUnityInstance(document.querySelector("#gameContainer"), config, (progress) => {
+            UnityProgress({ progress });
+        }).then((gameInstance) => {
+            gameInstance.SendMessage('GameObject', 'MethodName', 'Argument');
+        }).catch((message) => {
+            alert(message);
+        });
+    };
+    document.body.appendChild(script);
+    
+    var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
         const loader = document.querySelector("#loader");
         let percent_progress = progress * 100;
 
         if (!gameInstance.progress) {
-            const progress = document.querySelector("#loader .progress");
-            progress.style.display = "block";
-            gameInstance.progress = progress.querySelector(".full");
+            const progressElem = document.querySelector("#loader .progress");
+            progressElem.style.display = "block";
+            gameInstance.progress = progressElem.querySelector(".full");
             loader.querySelector(".spinner").style.display = "none";
         }
 
@@ -258,4 +268,5 @@
         }
     }
 </script>
+</body>
 </html>
