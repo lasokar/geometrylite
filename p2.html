@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geometry Lite Launcher</title>
+  <link rel="icon" href="litefavicon.png">
+  <style>
+  body {
+    margin: 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Source Code Pro", monospace;
+    background-color: black;
+    background-image: url('https://lasokar.github.io/geometrylite/launcher.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 150px;
+    position: relative;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  .rounded-button {
+    border-radius: 40px;
+    border: 10px solid black;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+
+    transform: translateX(25px);
+    border-color: green;
+  }
+
+  .rounded-button:hover {
+    border-color: #34eb49;
+    transform: translateX(25px) scale(1.1);
+  }
+  
+  .button-text {
+    font-family: "Source Code Pro", monospace;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    color: white;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <p>
+    <div class="row">
+   	  <div>
+        <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/breeze.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/breezefavicon.png'); background-color: #fed200;"></button>
+        <p class="button-text">Breeze</p>
+      </div>
+      <div>
+        <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/spookydash.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/spookydashfavicon.png'); background-color: #fed200;"></button>
+        <p class="button-text">Spooky Dash</p>
+      </div>
+      <div>
+        <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/xmasdash.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/xmasdashfavicon.png'); background-color: #fed200;"></button>
+        <p class="button-text">Xmas Dash</p>
+      </div>
+      <div>
+        <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/eggdash.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/eggdashfavicon.png'); background-color: #fed200;"></button>
+        <p class="button-text">Egg Dash</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
