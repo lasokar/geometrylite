@@ -68,7 +68,7 @@
     width: 50px;
     height: 60px;
     left: 50px;
-    top: 54%;
+    top: 52%;
     transform: translateY(-50%);
     cursor: pointer;
     transition: transform 0.3s;
@@ -77,15 +77,29 @@
   .left-arrow:hover {
     transform: translateY(-50%) scale(1.1);
   }
+  
+  .right-arrow {
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    right: 50px;
+    top: 52%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .right-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
   </style>
 </head>
 <body>
   <div class="container">
-  <p>
     <div class="row">
    	  <div>
-        <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/breeze.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/breezefavicon.png'); background-color: #fed200;"></button>
-        <p class="button-text">Breeze</p>
+        <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/geojumpselect.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/geojumpfavicon.png'); background-color: #fed200;"></button>
+        <p class="button-text">GeoJump</p>
       </div>
       <div>
         <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/spookydash.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/spookydashfavicon.png'); background-color: #fed200;"></button>
@@ -102,5 +116,6 @@
     </div>
   </div>
 <img src="https://lasokar.github.io/geometrylite/left.png" class="left-arrow" onclick="window.location.href='https://lasokar.github.io/geometrylite'">
+<img src="https://lasokar.github.io/geometrylite/right.png" class="right-arrow" onclick="window.location.href='https://lasokar.github.io/geometrylite/p3.html'">
 </body>
 </html>
