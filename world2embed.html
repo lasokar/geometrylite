@@ -178,26 +178,10 @@
             z-index: 1000;
             padding: 12px;
         }
-        .backarrow {
-            position: absolute;
-            margin-left: 10px;
-            margin-top: 10px;
-            top: calc(100vh - 120px);
-            left: 10px;
-            z-index: 1001;
-        }
-
-        .backarrow img {
-            width: 75px;
-            height: 90px;
-        }
     </style>
 </head>
 
 <body>
-<a href="https://lasokar.github.io/geometrylite/worldselect.html" class="backarrow">
-    <img src="https://lasokar.github.io/geometrylite/back.png" alt="back">
-</a>
 <div id="gameContainer"></div>
 <div id="loader">
     <img class="logo" src="world.png?v=1">
@@ -228,7 +212,6 @@
         t();
     };
     var gameInstance = UnityLoader.instantiate("gameContainer", "Build_world_v2/geometryworld.json", {onProgress: UnityProgress});
-    var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
 
@@ -243,11 +226,6 @@
         }
 
         gameInstance.progress.style.width = `${percent_progress}%`;
-        
-        if (percent_progress >= 75 && !alertShown) {
-            alert("Start spamming ESC until the game loads to bypass the redirection");
-            alertShown = true;
-        }
 
         if (progress === 1 && !gameInstance.removeTimeout) {
             gameInstance.removeTimeout = setTimeout(function () {
