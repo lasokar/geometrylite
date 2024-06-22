@@ -222,7 +222,6 @@
         t();
     };
     var gameInstance = UnityLoader.instantiate("gameContainer", "Build_geo_jump_v2/GeometryJump_v1.json", {onProgress: UnityProgress});
-    var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
         const loader = document.querySelector("#loader");
@@ -236,11 +235,6 @@
         }
 
         gameInstance.progress.style.width = `${percent_progress}%`;
-
-        if (percent_progress >= 75 && !alertShown) {
-            alert("Start spamming ESC until the game loads to bypass the redirection");
-            alertShown = true;
-        }
 
         if (progress === 1 && !gameInstance.removeTimeout) {
             gameInstance.removeTimeout = setTimeout(function () {
