@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Geometry Lite Launcher</title>
+  <link rel="icon" href="litefavicon.png">
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: "Source Code Pro", monospace;
+      background-color: black;
+      background-image: url('https://lasokar.github.io/geometrylite/version.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 50px;
+      margin-top: 150px;
+      position: relative;
+    }
+    
+    .row {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .rounded-button {
+      border-radius: 40px;
+      border: 10px solid black;
+      background-size: cover;
+      background-position: center;
+      width: 200px;
+      height: 200px;
+      margin-right: 50px;
+      margin-bottom: 20px;
+      transition: transform 0.3s, border-color 0.3s;
+      transform: translateX(25px);
+      border-color: green;
+    }
+
+    .rounded-button:hover {
+      border-color: #34eb49;
+      transform: translateX(25px) scale(1.1);
+    }
+
+    .button-text {
+      font-family: "Source Code Pro", monospace;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      color: white;
+    }
+    
+    .backarrow {
+      position: absolute;
+      margin-left: 10px;
+      margin-top: 10px;
+      top: 10px;
+      left: 10px;
+    }
+    
+    .backarrow img {
+      width: 75px;
+      height: 90px;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://lasokar.github.io/geometrylite/" class="backarrow">
+    <img src="https://lasokar.github.io/geometrylite/back.png" alt="back">
+  </a>
+  <div class="container">
+    <div class="row">
+      <div>
+        <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/subzero.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/subzerofavicon.png'); background-color: #fed200;"></button>
+        <p class="button-text">v1.3</p>
+      </div>
+      <div>
+        <button type="button" onclick="window.location.href = 'https://lasokar.github.io/geometrylite/subzeronew.html'" class="rounded-button" style="background-image: url('https://lasokar.github.io/geometrylite/subzeronewfavicon.png'); background-color: #fed200;"></button>
+        <p class="button-text">v1.4</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
