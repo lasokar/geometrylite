@@ -216,12 +216,12 @@
 </svg>
 </body>
 
-<script src="Build/UnityLoader.js"></script>
+<script src="Build_23/UnityLoader.js"></script>
 <script>
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
-    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/geo.json", {onProgress: UnityProgress});
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_23/geo.json", {onProgress: UnityProgress});
     var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
