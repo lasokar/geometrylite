@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Geo Jump v2</title>
+    <title>Geo Jump v2.0</title>
     <link rel="icon" href="geojumpfavicon.png">
     <style>
         html {
@@ -216,12 +216,12 @@
 </svg>
 </body>
 
-<script src="Build_geo_jump_v2/UnityLoader.js"></script>
+<script src="Build_geojump_20/UnityLoader.js"></script>
 <script>
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
-    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_geo_jump_v2/GeometryJump_v1.json", {onProgress: UnityProgress});
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_geojump_20/GeometryJump_v1.json", {onProgress: UnityProgress});
 
     function UnityProgress(gameInstance, progress) {
         const loader = document.querySelector("#loader");
