@@ -216,12 +216,12 @@
 </svg>
 </body>
 
-<script src="Build_geo_jump_v3/UnityLoader.js"></script>
+<script src="Build_geojump2/UnityLoader.js"></script>
 <script>
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
-    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_geo_jump_v3/GeometryJump_v2.json", {onProgress: UnityProgress});
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_geojump2/GeometryJump_v2.json", {onProgress: UnityProgress});
 
     function UnityProgress(gameInstance, progress) {
         const loader = document.querySelector("#loader");
