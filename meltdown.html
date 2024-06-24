@@ -222,12 +222,12 @@
 </body>
 
 
-<script src="Build_geo_meltdown/UnityLoader.js"></script>
+<script src="Build_meltdown/UnityLoader.js"></script>
 <script> 
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
-    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_geo_meltdown/geometrmeltdown.json", {onProgress: UnityProgress});
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_meltdown/geometrmeltdown.json", {onProgress: UnityProgress});
     var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
