@@ -222,12 +222,12 @@
 </body>
 
 
-<script src="Build_world/UnityLoader.js"></script>
+<script src="Build_world_10/UnityLoader.js"></script>
 <script> 
     UnityLoader.compatibilityCheck = function (e, t, r) {
         t();
     };
-    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_world/geometryworld.json", {onProgress: UnityProgress});
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build_world_10/geometryworld.json", {onProgress: UnityProgress});
     var alertShown = false;
 
     function UnityProgress(gameInstance, progress) {
